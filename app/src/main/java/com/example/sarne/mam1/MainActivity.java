@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new CameraFragment());
         fragmentTransaction.commit();
-    //    _fragmentStrategyProvider = FragmentStrategyProvider.Create();
-     ///   IStrategy strategy = _fragmentStrategyProvider
-    //            .Get(String.valueOf(R.id.nav_camera));
-       // strategy.ShowFragment();
+        _fragmentStrategyProvider = FragmentStrategyProvider.Create();
+        _fragmentStrategyProvider
+                .Get(String.valueOf(R.id.nav_camera))
+                .ShowFragment(this);
 
         InitProperties();
 
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         _fragmentStrategyProvider
                 .Get(String.valueOf(item.getItemId()))
-                .ShowFragment();
+                .ShowFragment(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

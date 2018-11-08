@@ -1,5 +1,7 @@
 package com.example.sarne.mam1.Strategy;
 
+import android.content.Context;
+
 import com.example.sarne.mam1.R;
 import com.example.sarne.mam1.Strategy.Stategies.CameraStrategy;
 import com.example.sarne.mam1.Strategy.Stategies.VRGalleryStrategy;

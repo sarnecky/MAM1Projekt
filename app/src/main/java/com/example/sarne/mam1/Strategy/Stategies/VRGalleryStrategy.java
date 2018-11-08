@@ -1,5 +1,7 @@
 package com.example.sarne.mam1.Strategy.Stategies;
 
+import android.content.Context;
+
 import com.example.sarne.mam1.Strategy.IStrategy;
 import com.example.sarne.mam1.Transactions.FragmentTransactionMaker;
 import com.example.sarne.mam1.VRGalleryFragment;
@@ -13,7 +15,7 @@ public class VRGalleryStrategy implements IStrategy {
     }
 
     @Override
-    public void ShowFragment() {
-        _fragmentTransactionMaker.Commit(new VRGalleryFragment());
+    public void ShowFragment(Context context) {
+        _fragmentTransactionMaker.Commit(new VRGalleryFragment(), context);
     }
 }

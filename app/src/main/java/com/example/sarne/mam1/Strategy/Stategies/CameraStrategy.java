@@ -1,5 +1,7 @@
 package com.example.sarne.mam1.Strategy.Stategies;
 
+import android.content.Context;
+
 import com.example.sarne.mam1.CameraFragment;
 import com.example.sarne.mam1.Strategy.IStrategy;
 import com.example.sarne.mam1.Transactions.FragmentTransactionMaker;
@@ -12,7 +14,7 @@ public class CameraStrategy implements IStrategy {
         _fragmentTransactionMaker = fragmentTransactionMaker;
     }
     @Override
-    public void ShowFragment() {
-        _fragmentTransactionMaker.Commit(new CameraFragment());
+    public void ShowFragment(Context context) {
+        _fragmentTransactionMaker.Commit(new CameraFragment(), context);
     }
 }
