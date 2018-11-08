@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new CameraFragment());
         fragmentTransaction.commit();
-        _fragmentStrategyProvider = FragmentStrategyProvider.Create();
-        IStrategy strategy = _fragmentStrategyProvider
-                .Get(String.valueOf(R.id.nav_camera));
-        strategy.ShowFragment();
+    //    _fragmentStrategyProvider = FragmentStrategyProvider.Create();
+     ///   IStrategy strategy = _fragmentStrategyProvider
+    //            .Get(String.valueOf(R.id.nav_camera));
+       // strategy.ShowFragment();
 
         InitProperties();
 
