@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new CameraFragment());
-        fragmentTransaction.commit();
         _fragmentStrategyProvider = FragmentStrategyProvider.Create();
         _fragmentStrategyProvider
                 .Get(String.valueOf(R.id.nav_camera))
