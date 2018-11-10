@@ -77,7 +77,7 @@ public class CameraActivity extends AppCompatActivity
     private HandlerThread mBackgroundThread;
     private NavigationView navigationView;
     private Toolbar toolbar;
-    private ActivityStrategyProvider _fragmentStrategyProvider;
+    private ActivityStrategyProvider _fragmentStrategyProvider = ActivityStrategyProvider.Create();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,14 +93,11 @@ public class CameraActivity extends AppCompatActivity
                 takePicture();
             }
         });
-
-        _fragmentStrategyProvider = ActivityStrategyProvider.Create();
-
         toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout2);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
