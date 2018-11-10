@@ -2,19 +2,19 @@ package com.example.sarne.mam1.Strategy.Stategies;
 
 import android.content.Context;
 
-import com.example.sarne.mam1.CameraFragment;
+import com.example.sarne.mam1.CameraActivity;
 import com.example.sarne.mam1.Strategy.IStrategy;
-import com.example.sarne.mam1.Transactions.FragmentTransactionMaker;
+import com.example.sarne.mam1.Transactions.ActivityMaker;
 
 public class CameraStrategy implements IStrategy {
 
-    private FragmentTransactionMaker _fragmentTransactionMaker;
+    private ActivityMaker _activityMaker;
 
-    public CameraStrategy(FragmentTransactionMaker fragmentTransactionMaker){
-        _fragmentTransactionMaker = fragmentTransactionMaker;
+    public CameraStrategy(ActivityMaker activityMaker){
+        _activityMaker = activityMaker;
     }
     @Override
-    public void ShowFragment(Context context) {
-        _fragmentTransactionMaker.Commit(new CameraFragment(), context);
+    public void showActivity(Context context) {
+        _activityMaker.Commit(context, CameraActivity.class);
     }
 }
