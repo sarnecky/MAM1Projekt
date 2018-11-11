@@ -11,6 +11,10 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="VR Gallery" />
+        <item
+            android:id="@+id/nav_stepCounter"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Step Counter" />
     </group>
 </menu>

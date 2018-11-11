@@ -13,4 +13,5 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_vrgallery">VRGalleryActivity</string>
+    <string name="title_activity_step_counter">StepCounterActivity</string>
 </resources>
