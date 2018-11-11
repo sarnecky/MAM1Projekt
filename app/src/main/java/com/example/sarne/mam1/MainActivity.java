@@ -23,14 +23,10 @@ import android.widget.Toast;
 import com.example.sarne.mam1.Strategy.ActivityStrategyProvider;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
-        SensorEventListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     private NavigationView navigationView;
     private Toolbar toolbar;
-    private TextView stepsCountText;
-    private SensorManager sensorManager;
-    boolean running;
     private ActivityStrategyProvider _fragmentStrategyProvider = ActivityStrategyProvider.Create();
 
     @Override
@@ -63,29 +59,19 @@ public class MainActivity extends AppCompatActivity
     private void InitProperties(){
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        stepsCountText = findViewById(R.id.stepsCountText);
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        running = true;
-        Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
 
-        if(countSensor == null)
-            Toast.makeText(this, "Sensor not found", Toast.LENGTH_SHORT).show();
-
-        sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        running = false;
-        sensorManager.unregisterListener(this);
     }
 
     @Override
@@ -130,16 +116,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        //if(running)
-         //   stepsCountText.setText(String.valueOf(event.values[0]));
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
     }
 }
