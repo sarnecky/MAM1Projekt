@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.sarne.mam1"
-        minSdkVersion 26
+        minSdkVersion 25
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -27,5 +27,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile 'com.google.vr:sdk-panowidget:1.170.0'
+    implementation 'com.google.vr:sdk-panowidget:1.170.0'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
 }

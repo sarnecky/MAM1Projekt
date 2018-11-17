@@ -16,5 +16,13 @@
             android:id="@+id/nav_stepCounter"
             android:icon="@drawable/ic_menu_share"
             android:title="Step Counter" />
+        <item
+            android:id="@+id/nav_checkWeather"
+            android:icon="@drawable/ic_partly_cloudy_day"
+            android:title="Check Weather" />
+        <item
+            android:id="@+id/nav_followObject"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Follow Object" />
     </group>
 </menu>

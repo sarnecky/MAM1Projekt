@@ -22,19 +22,11 @@
 
     <include layout="@layout/content_vrgallery" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
     <com.google.vr.sdk.widgets.pano.VrPanoramaView
         android:id="@+id/pano_view2"
         android:layout_margin="5dip"
         android:layout_width="match_parent"
-        android:scrollbars="@null"
+        android:scrollbars=""
         android:layout_height="match_parent"/>
 
 </android.support.design.widget.CoordinatorLayout>
