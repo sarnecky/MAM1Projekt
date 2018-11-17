@@ -2,6 +2,7 @@ package com.example.sarne.mam1.Strategy;
 
 import com.example.sarne.mam1.R;
 import com.example.sarne.mam1.Strategy.Stategies.CameraStrategy;
+import com.example.sarne.mam1.Strategy.Stategies.CheckWeatherStrategy;
 import com.example.sarne.mam1.Strategy.Stategies.StepCounterStrategy;
 import com.example.sarne.mam1.Strategy.Stategies.VRGalleryStrategy;
 import com.example.sarne.mam1.Transactions.ActivityMaker;
@@ -31,6 +32,7 @@ public class ActivityStrategyProvider {
         dic.put(String.valueOf(R.id.nav_camera), new CameraStrategy(_activityMaker));
         dic.put(String.valueOf(R.id.nav_gallery), new VRGalleryStrategy(_activityMaker));
         dic.put(String.valueOf(R.id.nav_stepCounter), new StepCounterStrategy(_activityMaker));
+        dic.put(String.valueOf(R.id.nav_checkWeather), new CheckWeatherStrategy(_activityMaker));
         return dic;
     }
 }
